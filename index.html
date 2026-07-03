@@ -7,7 +7,7 @@
   <title>Callianna Priebe | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
-      <a class="nav__logo" href="#home">CP</a>
+      <a class="nav__logo" href="#home">Callianna Kaylin Priebe</a>
       <ul class="nav__tabs" role="tablist">
         <li role="presentation">
           <button class="nav__tab is-active" role="tab" id="tab-home" aria-selected="true" aria-controls="panel-home" data-tab="home">Home</button>
@@ -44,28 +44,27 @@
   </header>
 
   <main id="main">
+    
     <!-- Home -->
     <section class="panel is-active" id="panel-home" role="tabpanel" aria-labelledby="tab-home" data-panel="home">
-      <div class="hero">
+      <div class="hero dots">
         <div class="hero__content">
-          <p class="hero__eyebrow">Hello, I'm</p>
-          <h1 class="hero__title">Callianna Priebe</h1>
-          <p class="hero__subtitle">Computer Science &amp; Data Science professional building thoughtful, data-driven solutions.</p>
+          <h1 class="hero__title">Callianna Kaylin</h1>
+          <p class="hero__subtitle">Software developer</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="assets/resume/CalliannaPriebeResume_2026.pdf" download="CalliannaPriebeResume_2026.pdf">
-              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              Download Resume
-            </a>
+            <div class="resume-trigger">
+              <button type="button" class="btn btn--primary" id="view-resume-btn" aria-haspopup="dialog" aria-controls="resume-modal">
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                View Resume
+              </button>
+            </div>
             <button class="btn btn--ghost" data-tab-link="projects">View Projects</button>
           </div>
         </div>
         <div class="hero__visual" aria-hidden="true">
-          <div class="hero__orb hero__orb--1"></div>
-          <div class="hero__orb hero__orb--2"></div>
           <div class="hero__card">
             <span class="hero__card-label">Focus</span>
             <p>Machine Learning · Full-Stack Development · Data Analysis</p>
@@ -74,25 +73,54 @@
       </div>
 
       <section class="about" aria-labelledby="about-heading">
-        <h2 id="about-heading" class="section-title">About</h2>
+        <h2 id="about-heading" class="section-title">About me</h2>
         <div class="about__grid">
-          <p class="about__text">
-            I combine strong foundations in computer science with hands-on experience in machine learning,
-            database systems, and software development. I'm passionate about turning complex problems into
-            clear, elegant solutions — whether that's training models, building applications, or analyzing data.
-          </p>
-          <div class="skills">
-            <h3 class="skills__title">Skills</h3>
-            <ul class="skills__list">
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>SQL</li>
-              <li>Machine Learning</li>
-              <li>Data Visualization</li>
-              <li>Git</li>
-              <li>Jupyter</li>
-              <li>Web Development</li>
-            </ul>
+          <div class="about__left">
+            <p class="about__text">
+              Spring 2026 honors graduate from the University of Colorado Boulder with a B.A. in Computer Science, focusing on applied machine learning, and a minor in Philosophy with a focus on AI ethics.
+            </p>
+            <p class="about__text">
+              I have been programming since I was 9 years old, and got my first job teaching computer science at 12 for Hands-On Technology Education, an organization that teaches coding to kids.
+               Since then, I have:
+               <br> - Worked on a team at <b>Microsoft Research</b> developing <b>anomaly detection models</b> to
+               pinpoint seizures in epilepsy patients' MEG & EEG data
+               <br> - Developed a <b>YOLO object detection model</b> to detect and classify pavement deformities for Arterial, a small tech startup in Boulder
+               <br> - <b>Wrote and taught machine learning lectures</b> for CU Boulder Applied ML students
+               <br> - Wrote <b>computer science curriculum</b> for San Diego Unified School District
+               <br> - Designed quantum circuits at UC Irvine
+            </p>
+            
+            <p class="about__text">
+              I would love to pursue a career in <b>ML model development & application</b>, specifically <b>computer vision</b> or <b>data analysis</b>, and am open to any opportunities that would allow me to grow my skillset and contribute to meaningful projects.
+            </p>
+            
+            <p class="about__text">
+               Aside from computer science, I am also very interested in quantum mechanics and computation, and would love any opportunities to increase my knowledge in this field.
+              </p>
+          </div>
+          <div class="about__right dots">
+            <div class="about__image-card">
+              <img class="about__image" src="assets/resume/caligrad.jpg" alt="" aria-hidden="true">
+            </div>
+            <p class="about__text">
+              Based in Boulder, Colorado
+            </p>
+            <div class="skills">
+              <h3 class="skills__title">Skills</h3>
+              <ul class="skills__list">
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>Machine Learning</li>
+                <li>YOLO</li>
+                <li>Data Visualization</li>
+                <li>Git</li>
+                <li>Jupyter</li>
+                <li>Web Development</li>
+                <li>UX/UI</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -100,113 +128,117 @@
 
     <!-- Projects -->
     <section class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
-      <div class="section-header">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-desc">Selected work spanning machine learning, data science, and software development.</p>
-      </div>
-
-      <div class="carousel" aria-roledescription="carousel" aria-label="Featured projects">
-        <div class="carousel__track-container">
-          <ul class="carousel__track" id="carousel-track">
-            <li class="carousel__slide is-active" aria-hidden="false">
-              <article class="project-card">
-                <div class="project-card__visual project-card__visual--ml"></div>
-                <div class="project-card__body">
-                  <span class="project-card__tag">Machine Learning</span>
-                  <h3 class="project-card__title">Animal Decomposition &amp; Decay Analysis</h3>
-                  <p class="project-card__desc">ML project exploring patterns in animal corpse decomposition data using classification and regression techniques.</p>
-                  <ul class="project-card__tech">
-                    <li>Python</li>
-                    <li>Scikit-learn</li>
-                    <li>Pandas</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li class="carousel__slide" aria-hidden="true">
-              <article class="project-card">
-                <div class="project-card__visual project-card__visual--vision"></div>
-                <div class="project-card__body">
-                  <span class="project-card__tag">Computer Vision</span>
-                  <h3 class="project-card__title">Dogs vs. Cats Classifier</h3>
-                  <p class="project-card__desc">Image classification model trained to distinguish between dog and cat images with evaluation metrics and visual results.</p>
-                  <ul class="project-card__tech">
-                    <li>Python</li>
-                    <li>TensorFlow</li>
-                    <li>CNN</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li class="carousel__slide" aria-hidden="true">
-              <article class="project-card">
-                <div class="project-card__visual project-card__visual--yolo"></div>
-                <div class="project-card__body">
-                  <span class="project-card__tag">Deep Learning</span>
-                  <h3 class="project-card__title">YOLO Object Detection</h3>
-                  <p class="project-card__desc">Real-time object detection pipeline built with YOLO, including model training, inference, and performance benchmarking.</p>
-                  <ul class="project-card__tech">
-                    <li>Python</li>
-                    <li>YOLO</li>
-                    <li>OpenCV</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li class="carousel__slide" aria-hidden="true">
-              <article class="project-card">
-                <div class="project-card__visual project-card__visual--db"></div>
-                <div class="project-card__body">
-                  <span class="project-card__tag">Database Systems</span>
-                  <h3 class="project-card__title">CSCI 3202 Database Project</h3>
-                  <p class="project-card__desc">Full-stack database application with schema design, SQL queries, and a functional interface for data management.</p>
-                  <ul class="project-card__tech">
-                    <li>SQL</li>
-                    <li>Python</li>
-                    <li>Database Design</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li class="carousel__slide" aria-hidden="true">
-              <article class="project-card">
-                <div class="project-card__visual project-card__visual--hf"></div>
-                <div class="project-card__body">
-                  <span class="project-card__tag">NLP</span>
-                  <h3 class="project-card__title">Hugging Face NLP Pipeline</h3>
-                  <p class="project-card__desc">Natural language processing workflow using Hugging Face transformers for text classification and analysis tasks.</p>
-                  <ul class="project-card__tech">
-                    <li>Python</li>
-                    <li>Hugging Face</li>
-                    <li>Transformers</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-          </ul>
+      <div class="dots">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-desc">Selected machine learning works throughout my career</p>
+        <!-- <p><br></p> -->
         </div>
 
-        <div class="carousel__controls">
-          <button class="carousel__btn carousel__btn--prev" aria-label="Previous project">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-          </button>
-          <div class="carousel__dots" role="tablist" aria-label="Project slides"></div>
-          <button class="carousel__btn carousel__btn--next" aria-label="Next project">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6"/>
-            </svg>
-          </button>
+        <div class="carousel" aria-roledescription="carousel" aria-label="Featured projects">
+          <div class="carousel__track-container">
+            <ul class="carousel__track" id="carousel-track">
+              <li class="carousel__slide is-active" aria-hidden="false">
+                <a href="#" class="project-card">
+                  <div class="project-card__visual project-card__visual--ml"></div>
+                  <div class="project-card__body">
+                    <span class="project-card__tag">Machine Learning</span>
+                    <h3 class="project-card__title">Animal Decomposition &amp; Decay Analysis</h3>
+                    <p class="project-card__desc">ML project exploring patterns in animal corpse decomposition data using classification and regression techniques.</p>
+                    <ul class="project-card__tech">
+                      <li>Python</li>
+                      <li>Scikit-learn</li>
+                      <li>Pandas</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="carousel__slide" aria-hidden="true">
+                <a href="#" class="project-card">
+                  <div class="project-card__visual project-card__visual--vision"></div>
+                  <div class="project-card__body">
+                    <span class="project-card__tag">Computer Vision</span>
+                    <h3 class="project-card__title">Dogs vs. Cats Classifier</h3>
+                    <p class="project-card__desc">Image classification model trained to distinguish between dog and cat images with evaluation metrics and visual results.</p>
+                    <ul class="project-card__tech">
+                      <li>Python</li>
+                      <li>TensorFlow</li>
+                      <li>CNN</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="carousel__slide" aria-hidden="true">
+                <a href="#" class="project-card">
+                  <div class="project-card__visual project-card__visual--yolo"></div>
+                  <div class="project-card__body">
+                    <span class="project-card__tag">Deep Learning</span>
+                    <h3 class="project-card__title">YOLO Object Detection</h3>
+                    <p class="project-card__desc">Real-time object detection pipeline built with YOLO, including model training, inference, and performance benchmarking.</p>
+                    <ul class="project-card__tech">
+                      <li>Python</li>
+                      <li>YOLO</li>
+                      <li>OpenCV</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="carousel__slide" aria-hidden="true">
+                <a href="#" class="project-card">
+                  <div class="project-card__visual project-card__visual--db"></div>
+                  <div class="project-card__body">
+                    <span class="project-card__tag">Database Systems</span>
+                    <h3 class="project-card__title">CSCI 3202 Database Project</h3>
+                    <p class="project-card__desc">Full-stack database application with schema design, SQL queries, and a functional interface for data management.</p>
+                    <ul class="project-card__tech">
+                      <li>SQL</li>
+                      <li>Python</li>
+                      <li>Database Design</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="carousel__slide" aria-hidden="true">
+                <a href="#" class="project-card">
+                  <div class="project-card__visual project-card__visual--hf"></div>
+                  <div class="project-card__body">
+                    <span class="project-card__tag">NLP</span>
+                    <h3 class="project-card__title">Hugging Face NLP Pipeline</h3>
+                    <p class="project-card__desc">Natural language processing workflow using Hugging Face transformers for text classification and analysis tasks.</p>
+                    <ul class="project-card__tech">
+                      <li>Python</li>
+                      <li>Hugging Face</li>
+                      <li>Transformers</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="carousel__btn carousel__btn--prev" aria-label="Previous project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+            </button>
+            <div class="carousel__dots" role="tablist" aria-label="Project slides"></div>
+            <button class="carousel__btn carousel__btn--next" aria-label="Next project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" data-panel="contact" hidden>
-      <div class="section-header">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-desc">Let's connect — I'm open to opportunities, collaborations, and conversations.</p>
+      <div class="dots">
+        <div class="section-header">
+        <h2 class="section-title">Contact me</h2>
+        <p class="section-desc">Feel free to reach out via email, LinkedIn, or GitHub. I'd love to discuss opportunities or collaborations.</p>
       </div>
 
       <div class="contact-grid">
@@ -218,7 +250,7 @@
             </svg>
           </div>
           <h3 class="contact-card__title">Email</h3>
-          <p class="contact-card__value">callianna.priebe@example.com</p>
+          <p class="contact-card__value">Calliannakaylin@gmail.com</p>
           <span class="contact-card__action">Send a message →</span>
         </a>
 
@@ -233,7 +265,7 @@
           <span class="contact-card__action">View profile →</span>
         </a>
 
-        <a class="contact-card" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <a class="contact-card" href="https://github.com/bloodypinecone" target="_blank" rel="noopener noreferrer">
           <div class="contact-card__icon">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
@@ -255,9 +287,10 @@
             </svg>
           </div>
           <h3 class="contact-card__title">Resume</h3>
-          <p class="contact-card__value">CalliannaPriebeResume_2026.pdf</p>
+          <p class="contact-card__value">Download resume</p>
           <span class="contact-card__action">Download PDF →</span>
         </a>
+      </div>
       </div>
     </section>
   </main>
@@ -265,6 +298,34 @@
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> Callianna Priebe. Built with HTML, CSS &amp; JavaScript.</p>
   </footer>
+
+  <div class="resume-modal" id="resume-modal" hidden aria-hidden="true">
+    <div class="resume-modal__backdrop" data-close-resume></div>
+    <div class="resume-modal__dialog" role="dialog" aria-labelledby="resume-modal-title" aria-modal="true">
+      <div class="resume-modal__header">
+        <h2 id="resume-modal-title" class="resume-modal__title">Resume</h2>
+        <button type="button" class="resume-modal__close" data-close-resume aria-label="Close resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="resume-modal__body">
+        <iframe src="assets/resume/CalliannaPriebeResume_2026.pdf#toolbar=0&navpanes=0" title="Callianna Priebe resume"></iframe>
+      </div>
+      <div class="resume-modal__footer">
+        <a class="btn btn--primary" href="assets/resume/CalliannaPriebeResume_2026.pdf" download="CalliannaPriebeResume_2026.pdf">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

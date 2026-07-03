@@ -43,9 +43,45 @@
     navToggle.setAttribute("aria-expanded", isOpen);
   });
 
+  /* ── Resume Modal ── */
+  var viewResumeBtn = document.getElementById("view-resume-btn");
+  var resumeModal = document.getElementById("resume-modal");
+  var resumeCloseEls = document.querySelectorAll("[data-close-resume]");
+
+  function openResumeModal() {
+    resumeModal.hidden = false;
+    resumeModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    resumeModal.querySelector(".resume-modal__close").focus();
+  }
+
+  function closeResumeModal() {
+    resumeModal.hidden = true;
+    resumeModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+    viewResumeBtn.focus();
+  }
+
+  if (viewResumeBtn && resumeModal) {
+    viewResumeBtn.addEventListener("click", openResumeModal);
+
+    resumeCloseEls.forEach(function (el) {
+      el.addEventListener("click", closeResumeModal);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !resumeModal.hidden) {
+        closeResumeModal();
+      }
+    });
+  }
+
   /* ── Carousel ── */
   var track = document.getElementById("carousel-track");
-  if (!track) return;
+  if (!track) {
+    document.getElementById("year").textContent = new Date().getFullYear();
+    return;
+  }
 
   var slides = track.querySelectorAll(".carousel__slide");
   var prevBtn = document.querySelector(".carousel__btn--prev");
